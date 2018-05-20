@@ -27,7 +27,7 @@ public class CRUD {
 		emp = employeeCRUD.readEmployee(id);
 		System.out.println("testowanie metody szukania pracownika: ");
 		System.out.println(emp.getFirstName() + " " + emp.getLastName());
-//		employeeCRUD.updateSalary(id);
+		employeeCRUD.updateSalary(id);
 		employeeCRUD.deleteEmployee(id);
 	}
 

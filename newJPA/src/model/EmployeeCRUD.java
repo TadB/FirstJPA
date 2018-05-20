@@ -29,7 +29,15 @@ public class EmployeeCRUD {
         entityManager.getTransaction().commit();
         entityManager.close();
     }
-    public void updateSalary(int id) {
+    public void updateSalary(BigDecimal id) {
+    	EntityManager entityManager;
+    	entityManager = entityManagerFactory.createEntityManager();
+    	entityManager.getTransaction().begin();
+    	Employee emp = entityManager.find(Employee.class, id);
+    	BigDecimal oldSalary = emp.getSalary();
+    	emp.setSalary(oldSalary.multiply(new BigDecimal("1.1")));
+    	entityManager.getTransaction().commit();
+    	entityManager.close();
     }
     public Employee readEmployee(BigDecimal id) {
       	EntityManager entityManager;
