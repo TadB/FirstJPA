@@ -24,17 +24,19 @@ public class EmployeeCRUD {
     	EntityManager entityManager;
         entityManager = entityManagerFactory.createEntityManager();
         entityManager.getTransaction().begin();
-        Employee emp = entityManager.find(Employee.class, new BigDecimal("300"));
+        Employee emp = entityManager.find(Employee.class, id);
         entityManager.remove(emp);
         entityManager.getTransaction().commit();
         entityManager.close();
-//        entityManager.merge(employee);
-
     }
     public void updateSalary(int id) {
     }
-    public Employee readEmployee(int id) {
-    	Employee emp = new Employee();
+    public Employee readEmployee(BigDecimal id) {
+      	EntityManager entityManager;
+        entityManager = entityManagerFactory.createEntityManager();
+        entityManager.getTransaction().begin();
+        Employee emp = entityManager.find(Employee.class, id);
+        entityManager.close();
     	return emp;
     }
     

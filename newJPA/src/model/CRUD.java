@@ -9,7 +9,7 @@ public class CRUD {
 		EmployeeCRUD employeeCRUD = new EmployeeCRUD();
 //-----------DANE TESTOWE --------------		
 		Employee employee = new Employee();
-		Employee ret = new Employee();
+		Employee emp = new Employee();
 		BigDecimal id = new BigDecimal("333");
 		employee.setFirstName("Adam");
 		employee.setLastName("Nowak");
@@ -24,7 +24,9 @@ public class CRUD {
 //-------------------------------------------
 		
 		employeeCRUD.createEmployee(employee);
-//		ret = employeeCRUD.readEmployee(id);
+		emp = employeeCRUD.readEmployee(id);
+		System.out.println("testowanie metody szukania pracownika: ");
+		System.out.println(emp.getFirstName() + " " + emp.getLastName());
 //		employeeCRUD.updateSalary(id);
 		employeeCRUD.deleteEmployee(id);
 	}
