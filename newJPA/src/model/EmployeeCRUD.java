@@ -1,5 +1,7 @@
 package model;
 
+import java.math.BigDecimal;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -18,10 +20,14 @@ public class EmployeeCRUD {
         entityManager.getTransaction().commit();
         entityManager.close();
     }
-    public void deleteEmployee(int id){
+    public void deleteEmployee(BigDecimal id){
     	EntityManager entityManager;
         entityManager = entityManagerFactory.createEntityManager();
         entityManager.getTransaction().begin();
+        Employee emp = entityManager.find(Employee.class, new BigDecimal("300"));
+        entityManager.remove(emp);
+        entityManager.getTransaction().commit();
+        entityManager.close();
 //        entityManager.merge(employee);
 
     }

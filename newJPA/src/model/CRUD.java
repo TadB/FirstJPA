@@ -10,7 +10,7 @@ public class CRUD {
 //-----------DANE TESTOWE --------------		
 		Employee employee = new Employee();
 		Employee ret = new Employee();
-		int id = 200;
+		BigDecimal id = new BigDecimal("333");
 		employee.setFirstName("Adam");
 		employee.setLastName("Nowak");
 		employee.setEmployeeId(new BigDecimal("333"));
@@ -26,7 +26,7 @@ public class CRUD {
 		employeeCRUD.createEmployee(employee);
 //		ret = employeeCRUD.readEmployee(id);
 //		employeeCRUD.updateSalary(id);
-//		employeeCRUD.deleteEmployee(id);
+		employeeCRUD.deleteEmployee(id);
 	}
 
 }
