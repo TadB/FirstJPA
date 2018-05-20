@@ -1,4 +1,4 @@
-package newJPA;
+package model;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -8,7 +8,7 @@ public class EmployeeCRUD {
     private EntityManagerFactory entityManagerFactory;
 
     EmployeeCRUD(){
-        entityManagerFactory = Persistence.createEntityManagerFactory("FirstJPA");
+        entityManagerFactory = Persistence.createEntityManagerFactory("newJPA");
     }
     public void createEmployee(Employee employee){
         EntityManager entityManager;

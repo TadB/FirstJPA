@@ -1,4 +1,4 @@
-package newJPA;
+package model;
 
 import java.math.BigDecimal;
 import java.util.Date;
@@ -9,7 +9,7 @@ public class CRUD {
 		EmployeeCRUD employeeCRUD = new EmployeeCRUD();
 //-----------DANE TESTOWE --------------		
 		Employee employee = new Employee();
-		Employee data = new Employee();
+		Employee ret = new Employee();
 		int id = 200;
 		employee.setFirstName("Adam");
 		employee.setLastName("Nowak");
@@ -19,12 +19,14 @@ public class CRUD {
 		employee.setManagerId(new BigDecimal("100"));
 		employee.setDepartmentId(new BigDecimal("50"));
 		employee.setSalary(new BigDecimal("6040"));
+		employee.setEmail("ANOWAK");
+		employee.setJobId("AD_VP");
 //-------------------------------------------
 		
 		employeeCRUD.createEmployee(employee);
-		data = employeeCRUD.readEmployee(id);
-		employeeCRUD.updateSalary(id);
-		employeeCRUD.deleteEmployee(id);
+//		ret = employeeCRUD.readEmployee(id);
+//		employeeCRUD.updateSalary(id);
+//		employeeCRUD.deleteEmployee(id);
 	}
 
 }
