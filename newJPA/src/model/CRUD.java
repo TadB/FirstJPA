@@ -18,7 +18,7 @@ public class CRUD {
 		employee.setHireDate(hireDate);
 		employee.setManagerId(new BigDecimal("100"));
 		employee.setDepartmentId(new BigDecimal("50"));
-		employee.setSalary(new BigDecimal("6040"));
+		employee.setSalary(new BigDecimal("6000"));
 		employee.setEmail("ANOWAK");
 		employee.setJobId("AD_VP");
 //-------------------------------------------
